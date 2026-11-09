@@ -1,0 +1,1004 @@
+<title>Waterlink × Sheraton JBR</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Water Link motorised and non-motorised water-sports concession proposal for Sheraton Jumeirah Beach Resort.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a working tender response — sticky index bar, one wide column of numbered RFP sections, tables where procurement needs to tick boxes. */
+:root{
+  --bg:#F2F6F6; --surface:#FFFFFF; --ink:#0D2A31; --muted:#4E6A70; --line:#D3E0E1;
+  --lagoon:#0A7586; --lagoon-soft:#DCEFF1; --sand:#C9A96B; --sand-soft:#F4ECDC;
+  --ok:#1E7A4C; --ok-bg:#E2F3EA; --warn:#9A6A08; --warn-bg:#FBF0D6; --todo:#8A3B2E; --todo-bg:#F8E4DF;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Figtree", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r:10px;
+  --deep:#06323C; --deep-2:#0B4A57; --deep-ink:#EAF6F7; --deep-muted:#A6CDD2; --glint:#7FE0EA; --tint:#E8F0F0;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --deep:#03161B; --deep-2:#082A31; --deep-ink:#E6F2F3; --deep-muted:#93B6BB; --glint:#7FE0EA; --tint:#0B2026;
+  --bg:#071A1F; --surface:#0E252B; --ink:#E6F0F1; --muted:#9DB4B8; --line:#21434A;
+  --lagoon:#4CC3D2; --lagoon-soft:#123A42; --sand:#D8BC84; --sand-soft:#2A2618;
+  --ok:#6FD3A0; --ok-bg:#12322A; --warn:#E9C46A; --warn-bg:#352B12; --todo:#F0A090; --todo-bg:#3A1F1A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --deep:#03161B; --deep-2:#082A31; --deep-ink:#E6F2F3; --deep-muted:#93B6BB; --glint:#7FE0EA; --tint:#0B2026;
+  --bg:#071A1F; --surface:#0E252B; --ink:#E6F0F1; --muted:#9DB4B8; --line:#21434A;
+  --lagoon:#4CC3D2; --lagoon-soft:#123A42; --sand:#D8BC84; --sand-soft:#2A2618;
+  --ok:#6FD3A0; --ok-bg:#12322A; --warn:#E9C46A; --warn-bg:#352B12; --todo:#F0A090; --todo-bg:#3A1F1A; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+a{color:var(--lagoon)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lagoon);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.12;margin:0}
+h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:700;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:700;letter-spacing:-.015em}
+h3{font-size:1.15rem;font-weight:700}
+p{margin:0;max-width:66ch}
+.eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--lagoon)}
+.muted{color:var(--muted)}
+.mono{font-family:var(--mono);font-size:.86em}
+.num{font-variant-numeric:tabular-nums}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:20px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-family:var(--display);font-weight:700;white-space:nowrap}
+.brand img{height:28px;width:auto}
+.brand small{font-family:var(--mono);font-weight:400;font-size:.7rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;margin-left:auto;min-width:0}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--muted);font-size:.86rem;font-weight:500;padding:6px 10px;border-radius:6px}
+.nav a:hover{background:var(--lagoon-soft);color:var(--ink)}
+
+/* hero */
+.hero{padding-block:56px 40px;display:grid;gap:36px}
+.hero-top{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:end}
+.hero-top>*{min-width:0}
+.prepared{display:inline-flex;gap:8px;align-items:center;font-size:.86rem;color:var(--muted);margin-bottom:18px}
+.prepared b{color:var(--ink);font-weight:600}
+.hero p.lede{font-size:1.1rem;color:var(--muted);margin-top:18px}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--lagoon)}
+.btn.primary{background:var(--lagoon);color:var(--surface)}
+.btn.ghost{color:var(--lagoon);background:transparent}
+.fee-card{background:var(--ink);color:var(--bg);border-radius:14px;padding:26px;display:grid;gap:18px}
+.fee-card .eyebrow{color:var(--sand)}
+.fee-big{font-family:var(--display);font-size:clamp(2rem,4.4vw,2.9rem);font-weight:700;letter-spacing:-.02em;line-height:1}
+.fee-big span{font-size:.45em;font-weight:500;opacity:.75;margin-left:6px}
+.fee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;border-top:1px solid color-mix(in srgb,var(--bg) 22%,transparent);padding-top:16px}
+.fee-grid div{display:grid;gap:2px}
+.fee-grid small{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.fee-grid b{font-family:var(--display);font-size:1.15rem}
+.glance{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+.glance div{padding:16px;display:grid;gap:4px;border-right:1px solid var(--line)}
+.glance div:last-child{border-right:0}
+.glance small{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.glance b{font-family:var(--display);font-size:1.05rem;line-height:1.25}
+
+/* sections */
+section.sec{padding-block:64px;border-top:1px solid var(--line);scroll-margin-top:64px}
+.sec-head{display:grid;gap:12px;margin-bottom:32px}
+.sec-head p{color:var(--muted);font-size:1.03rem}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;display:grid;gap:10px;align-content:start}
+.panel h3{margin-bottom:2px}
+.kv{display:grid;grid-template-columns:minmax(150px,220px) 1fr;border-top:1px solid var(--line)}
+.kv>div{padding:12px 0;border-bottom:1px solid var(--line);min-width:0}
+.kv>div:nth-child(odd){color:var(--muted);font-size:.9rem;padding-right:16px}
+ul.ticks{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ul.ticks li{padding-left:22px;position:relative}
+ul.ticks li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--lagoon)}
+
+/* tables */
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surface)}
+table{width:100%;border-collapse:collapse;font-size:.93rem}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg)}
+tr:last-child td{border-bottom:0}
+td.r,th.r{text-align:right}
+tfoot td{font-weight:700;background:var(--lagoon-soft)}
+td small{display:block;color:var(--muted);font-size:.82rem}
+
+.pill{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap;font-weight:500}
+.pill.ok{background:var(--ok-bg);color:var(--ok)}
+.pill.warn{background:var(--warn-bg);color:var(--warn)}
+.pill.todo{background:var(--todo-bg);color:var(--todo)}
+.tbc{background:var(--warn-bg);color:var(--warn);padding:1px 6px;border-radius:4px;font-family:var(--mono);font-size:.85em}
+
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;align-items:start}
+.loc>*{min-width:0}
+.zone{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px}
+.zone svg{width:100%;height:auto;display:block}
+.zone figcaption{font-size:.8rem;color:var(--muted);padding:6px 4px 0}
+
+/* activities */
+.act{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.ph{aspect-ratio:16/10;max-width:100%;background:linear-gradient(160deg,var(--lagoon-soft),var(--sand-soft));position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph .ph-label{position:absolute;left:12px;bottom:10px;font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.act .body{padding:20px;display:grid;gap:8px;align-content:start}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tags span{font-size:.78rem;border:1px solid var(--line);border-radius:999px;padding:2px 9px;color:var(--muted)}
+.addon{margin-top:20px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center;background:var(--sand-soft);border:1px solid color-mix(in srgb,var(--sand) 45%,transparent);border-radius:var(--r);padding:20px}
+.addon .badge{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--sand);color:var(--ink);padding:6px 10px;border-radius:6px;font-weight:500}
+
+/* org */
+.org{display:grid;gap:10px}
+.org-row{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.org-row .lvl{font-family:var(--mono);font-size:.8rem;color:var(--lagoon);font-weight:500;padding-top:2px}
+.org-row.l2{margin-left:24px}.org-row.l3{margin-left:48px}.org-row.l4{margin-left:72px}
+
+/* SOP */
+.sop{display:grid;gap:12px}
+.sop details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+.sop summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:14px;padding:16px 20px;font-family:var(--display);font-weight:700;font-size:1.05rem}
+.sop summary::-webkit-details-marker{display:none}
+.sop summary .code{font-family:var(--mono);font-size:.74rem;font-weight:500;color:var(--lagoon);min-width:58px}
+.sop summary .when{margin-left:auto;font-family:var(--body);font-weight:500;font-size:.84rem;color:var(--muted)}
+.sop summary::after{content:"+";font-family:var(--mono);color:var(--muted);margin-left:10px}
+.sop details[open] summary::after{content:"–"}
+.sop ol{margin:0;padding:0 20px 18px 92px;display:grid;gap:7px}
+.sop ol li{padding-left:4px}
+
+.hse{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.hse .panel .code{font-family:var(--mono);font-size:.72rem;color:var(--lagoon);letter-spacing:.08em}
+
+/* commercial */
+.comm{display:grid;grid-template-columns:1fr 1.25fr;gap:24px;align-items:start}
+.comm>*{min-width:0}
+.terms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.terms div{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px;display:grid;gap:3px}
+.terms small{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.callout{border-left:3px solid var(--sand);background:var(--sand-soft);padding:14px 18px;border-radius:0 8px 8px 0;font-size:.95rem}
+
+footer{border-top:1px solid var(--line);background:var(--surface);padding-block:40px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between;align-items:center}
+footer img{height:44px;width:auto}
+.contact{display:grid;gap:2px;text-align:right}
+.contact b{font-family:var(--display);font-size:1.1rem}
+
+@media (max-width:900px){
+  .hero-top,.loc,.comm{grid-template-columns:1fr}
+  .glance{grid-template-columns:repeat(3,1fr)}
+  .glance div:nth-child(3){border-right:0}
+  .glance div:nth-child(-n+3){border-bottom:1px solid var(--line)}
+  .grid3,.hse{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  .grid2,.grid3,.hse,.terms{grid-template-columns:1fr}
+  .glance{grid-template-columns:repeat(2,1fr)}
+  .glance div{border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .glance div:nth-child(even){border-right:0}
+  .glance div:nth-last-child(-n+2){border-bottom:0}
+  .fee-grid{grid-template-columns:1fr 1fr}
+  .kv{grid-template-columns:1fr}
+  .kv>div:nth-child(odd){border-bottom:0;padding-bottom:0}
+  .org-row.l2,.org-row.l3,.org-row.l4{margin-left:0}
+  .sop ol{padding-left:40px}
+  .sop summary .when{display:none}
+  .addon{grid-template-columns:1fr}
+  .brand small{display:none}
+  .contact{text-align:left}
+  section.sec{padding-block:48px}
+}
+
+/* ---- appeal layer ---- */
+.hero-band{position:relative;overflow:hidden;color:var(--deep-ink);
+  background:
+    linear-gradient(180deg,rgba(3,22,27,.35) 0%,rgba(3,22,27,.82) 78%),
+    url("img/hero.jpg") center 55%/cover no-repeat,
+    radial-gradient(120% 90% at 85% 10%,var(--deep-2) 0%,transparent 60%),
+    radial-gradient(90% 70% at 10% 100%,#0E6170 0%,transparent 65%),
+    var(--deep)}
+.hero-band .wrap{position:relative;z-index:2;padding-block:72px 120px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:end}
+.hero-band .wrap>*{min-width:0}
+.hero-band .prepared{color:var(--deep-muted)}
+.hero-band .prepared b{color:var(--deep-ink)}
+.hero-band h1{font-size:clamp(2.3rem,6vw,4.4rem);line-height:1.02;letter-spacing:-.03em}
+.hero-band h1 em{font-style:normal;color:var(--glint)}
+.hero-band .lede{color:var(--deep-muted);font-size:1.12rem;margin-top:20px}
+.hero-band .btn.primary{background:var(--glint);border-color:var(--glint);color:var(--deep)}
+.hero-band .btn.ghost{color:var(--deep-ink);border-color:rgba(234,246,247,.4)}
+.hero-band .fee-card{background:rgba(255,255,255,.08);color:var(--deep-ink);border:1px solid rgba(234,246,247,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hero-band .fee-card .eyebrow{color:var(--glint)}
+.waves{position:absolute;left:0;right:0;bottom:0;height:110px;z-index:1;pointer-events:none}
+.waves svg{position:absolute;bottom:0;width:200%;height:100%}
+.waves .w1{animation:drift 22s linear infinite;opacity:.55}
+.waves .w2{animation:drift 34s linear infinite reverse;opacity:.9}
+@keyframes drift{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.waves .w1,.waves .w2{animation:none}}
+.glance-wrap{position:relative;z-index:3;margin-top:-56px}
+.glance{box-shadow:0 18px 40px -24px rgba(3,22,27,.45)}
+.why{padding-block:56px 24px}
+.why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.why-item{display:grid;gap:10px;align-content:start;padding:22px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.why-item .big{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:1;color:var(--lagoon);letter-spacing:-.02em}
+.why-item h3{font-size:1.05rem}
+.why-item p{font-size:.93rem;color:var(--muted)}
+section.sec.alt{background:var(--tint)}
+section.sec.dark{background:var(--deep);color:var(--deep-ink);border-top:0}
+section.sec.dark .eyebrow{color:var(--glint)}
+section.sec.dark .sec-head p,section.sec.dark .muted{color:var(--deep-muted)}
+section.sec.dark h3.eyebrow{color:var(--glint)}
+section.sec.dark .addon{background:rgba(255,255,255,.06);border-color:rgba(234,246,247,.16)}
+section.sec.dark .addon .badge{background:var(--glint);color:var(--deep)}
+.act{position:relative;background:var(--deep-2);border:0;border-radius:16px;min-height:340px;display:block;isolation:isolate}
+.act .ph{position:absolute;inset:0;aspect-ratio:auto;z-index:-1;background:var(--g,linear-gradient(160deg,#0E6170,#06323C))}
+.act .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,22,27,0) 25%,rgba(3,22,27,.88) 100%)}
+.act .ph .ph-label{display:none}
+.act .body{position:absolute;left:0;right:0;bottom:0;padding:22px;color:#EAF6F7}
+.act .body .muted{color:#BFDDE1}
+.act .tags span{border-color:rgba(234,246,247,.3);color:#D5ECEF;background:rgba(3,22,27,.25)}
+.act .eyebrow{color:var(--glint)}
+.act.feature{grid-column:span 2;min-height:400px}
+.act.feature h3{font-size:1.7rem}
+.act:hover .ph img{transform:scale(1.04)}
+.act .ph img{transition:transform .6s ease}
+@media (prefers-reduced-motion:reduce){.act .ph img{transition:none}}
+.statband{background:var(--deep);color:var(--deep-ink)}
+.statband .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-block:40px}
+.statband div{display:grid;gap:4px}
+.statband b{font-family:var(--display);font-size:clamp(2rem,4vw,3rem);line-height:1;color:var(--glint);letter-spacing:-.02em}
+.statband small{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--deep-muted)}
+section.sec.sand{background:var(--sand-soft)}
+.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.7rem)}
+@media (max-width:900px){
+  .hero-band .wrap{grid-template-columns:1fr;padding-block:56px 110px}
+  .why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .act.feature{grid-column:span 2}
+  .statband .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:620px){
+  .why-grid{grid-template-columns:1fr}
+  .act.feature{grid-column:auto}
+}
+
+#inventory td:first-child,#inventory td:last-child,.nw{white-space:nowrap}
+.scale-note{margin-top:16px;display:flex;gap:12px;align-items:flex-start}
+.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:200px;gap:12px;margin-top:28px}
+.gallery figure{margin:0;border-radius:14px;overflow:hidden;background:var(--deep-2)}
+.gallery figure.g-wide{grid-column:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.05)}
+@media (prefers-reduced-motion:reduce){.gallery img{transition:none}}
+@media (max-width:900px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:160px}}
+.act.feature .ph img{object-position:center 60%}
+
+.vas{margin-top:32px;display:grid;gap:18px;scroll-margin-top:64px}
+.vas-head{display:grid;gap:8px}
+.vas-head h3{font-size:clamp(1.4rem,2.6vw,1.9rem)}
+.vas h4{margin:0;font-family:var(--display);font-size:1.08rem;line-height:1.25;text-wrap:balance}
+.vas .who{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase}
+.vas-feature{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.vf{background:var(--deep);color:var(--deep-ink);border-radius:16px;padding:24px;display:grid;gap:10px;align-content:start}
+.vf .who{color:var(--deep-muted)}
+.vf-big{font-family:var(--display);font-size:clamp(2rem,3.6vw,2.6rem);line-height:1;color:var(--glint);letter-spacing:-.02em}
+.vf p{margin:0;color:var(--deep-muted);font-size:.94rem}
+.vas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.vc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px;display:grid;gap:8px;align-content:start}
+.vc .who{color:var(--lagoon)}
+.vc p{margin:0;color:var(--muted);font-size:.94rem}
+@media (max-width:900px){.vas-feature{grid-template-columns:1fr}}
+@media (max-width:620px){.vas-grid{grid-template-columns:1fr}}
+</style>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="img/logo.png" alt="" onerror="this.remove()">Water Link <small>Concession proposal</small></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#index">RFP index</a><a href="#location">Location</a><a href="#profile">Company</a><a href="#scope">Scope</a><a href="#activities">Activities</a><a href="#inventory">Equipment</a><a href="#team">Staffing</a><a href="#safety">Safety</a><a href="#sops">SOPs</a><a href="#sustainability">Environment</a><a href="#marketing">Marketing</a><a href="#commercial">Commercial</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero-band">
+    <div class="wrap">
+      <div>
+        <div class="prepared">Tender response to <b>Sheraton Jumeirah Beach Resort, Dubai</b></div>
+        <h1>Jet Cars, jet skis and kayaks, <em>right on Sheraton's beach.</em></h1>
+        <p class="lede">The full range of water sports for Sheraton JBR, run by the operator already on this beachfront. Water Link brought the Jet Car to the UAE and runs nine hotel sites across Dubai and Abu Dhabi, backed by Rayna Group.</p>
+        <div class="ctas">
+          <a class="btn primary" href="#commercial">View commercial terms</a>
+          <a class="btn ghost" href="#activities">See the activities</a>
+        </div>
+      </div>
+      <aside class="fee-card" aria-label="Commercial summary">
+        <div class="eyebrow">Annual fixed concession fee</div>
+        <div class="fee-big num">AED 650,000<span>/ year incl. VAT</span></div>
+        <div class="fee-grid">
+          <div><small>Term</small><b>3 years</b></div>
+          <div><small>Contract value</small><b class="num">AED 1.95M</b></div>
+          <div><small>Excl. VAT</small><b class="num">619,048</b></div>
+        </div>
+      </aside>
+    </div>
+    <div class="waves" aria-hidden="true">
+      <svg class="w1" viewBox="0 0 2400 110" preserveAspectRatio="none"><path d="M0 60 Q150 30 300 60 T600 60 T900 60 T1200 60 T1500 60 T1800 60 T2100 60 T2400 60 V110 H0Z" fill="var(--glint)" opacity=".18"/></svg>
+      <svg class="w2" viewBox="0 0 2400 110" preserveAspectRatio="none"><path d="M0 80 Q200 55 400 80 T800 80 T1200 80 T1600 80 T2000 80 T2400 80 V110 H0Z" fill="var(--bg)"/></svg>
+    </div>
+  </section>
+
+  <div class="wrap glance-wrap">
+    <div class="glance">
+      <div><small>Trade licence</small><b class="num">932635 · DET</b></div>
+      <div><small>Live hotel sites</small><b>9 properties</b></div>
+      <div><small>Group fleet</small><b>39 craft</b></div>
+      <div><small>Certified crew</small><b>6 · STCW / DMA</b></div>
+      <div><small>Public liability</small><b>USD 5M at renewal</b></div>
+      <div><small>Emirates</small><b>Dubai & Abu Dhabi</b></div>
+    </div>
+  </div>
+
+  <div class="wrap why">
+    <div class="sec-head" style="margin-bottom:24px">
+      <span class="eyebrow">Why Water Link for Sheraton JBR</span>
+      <h2>Four reasons this is the low-risk choice.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><span class="big">0 km</span><h3>Already on this beach</h3><p>FIVE LUXE JBR, our largest hub, sits on the same JBR beachfront under DMA permit PRMT202600110. Backup craft and relief crew are minutes away.</p></div>
+      <div class="why-item"><span class="big">1st</span><h3>First Jet Car in the UAE</h3><p>Water Link introduced the Jet Car to the UAE. It gives Sheraton a signature experience no neighbouring hotel can match.</p></div>
+      <div class="why-item"><span class="big">9</span><h3>Hotels trust us today</h3><p>Live operations at nine hotel sites in Dubai and Abu Dhabi, including four Marriott International properties.</p></div>
+      <div class="why-item"><span class="big">USD 5M</span><h3>Insured to Marriott standards</h3><p>Marriott International is already named as additional insured. Cover rises to USD 5M, worldwide incl. USA/Canada, at renewal.</p></div>
+    </div>
+  </div>
+
+  <!-- RFP INDEX -->
+  <section class="sec" id="index">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP response index</span>
+        <h2>Every requirement in the brief, and where it is answered.</h2>
+        <p>Status shows whether the item is met today, committed before commencement, or a document to be supplied with the submission pack.</p>
+      </div>
+      <div class="grid3" style="margin-bottom:24px">
+        <div class="panel"><span class="eyebrow">Envelope part 1</span><h3>Technical Proposal</h3><p class="muted">Scope of services, activities, equipment inventory, staffing and training, safety plan, SOPs, environmental and marketing plans.</p></div>
+        <div class="panel"><span class="eyebrow">Envelope part 2</span><h3>Commercial Proposal</h3><p class="muted">Annual fixed concession fee, investment commitment and value-added services.</p></div>
+        <div class="panel"><span class="eyebrow">Envelope part 3</span><h3>Supporting Documentation</h3><p class="muted">Trade licence, VAT certificate, DMA permits, insurance certificates, crew certificates and the SOP manual.</p></div>
+      </div>
+      <p class="callout" style="margin-bottom:24px"><b>Submission:</b> Sheraton Jumeirah Beach Resort, Dubai, UAE · Bid Box, Staff Entrance security office · no later than close of business, 11 November 2026.</p>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>RFP ref</th><th>Requirement</th><th>Answered in</th><th>Envelope</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">1</td><td>Scope of services (7 obligations)</td><td><a href="#scope">Scope of services</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.1</td><td>Legal name, ownership, years in UAE</td><td><a href="#profile">Company profile</a></td><td>Supporting</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.1</td><td>Trade licence copy</td><td><a href="#profile">Company profile</a> · Annex A</td><td>Supporting</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.1</td><td>VAT registration certificate</td><td><a href="#profile">Company profile</a> · Annex B</td><td>Supporting</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.2</td><td>Hospitality experience and client list</td><td><a href="#experience">Experience</a></td><td>Supporting</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.3</td><td>UAE licences and marine permits</td><td><a href="#licensing">Licences & insurance</a></td><td>Supporting</td><td><span class="pill warn">Site permit before start</span></td></tr>
+            <tr><td class="mono">2.3</td><td>Proof of safety compliance</td><td><a href="#safety">Safety plan</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.4</td><td>Public liability ≥ USD 5M, worldwide incl. USA/Canada</td><td><a href="#licensing">Licences & insurance</a></td><td>Supporting</td><td><span class="pill warn">Committed · Dec 2026</span></td></tr>
+            <tr><td class="mono">2.4</td><td>Employee insurance per UAE law</td><td><a href="#licensing">Licences & insurance</a></td><td>Supporting</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">2.4</td><td>Equipment insurance</td><td><a href="#licensing">Licences & insurance</a></td><td>Supporting</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">3</td><td>Annual fixed concession fee</td><td><a href="#commercial">Commercial</a></td><td>Commercial</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">3</td><td>Investment commitment</td><td><a href="#commercial">Commercial</a></td><td>Commercial</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">3</td><td>Value-added services and promotions</td><td><a href="#value-added">Value-added services</a> · <a href="#marketing">Marketing</a></td><td>Commercial</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">4</td><td>Activities and equipment inventory</td><td><a href="#activities">Activities</a> · <a href="#inventory">Equipment</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">4</td><td>Staffing structure, training and certification</td><td><a href="#team">Staffing</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">4</td><td>Safety management plan</td><td><a href="#safety">Safety plan</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">4</td><td>Environmental and sustainability initiatives</td><td><a href="#sustainability">Environment</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">4</td><td>Marketing and guest engagement plan</td><td><a href="#marketing">Marketing</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">4</td><td>SOPs: opening, closing, maintenance, emergency</td><td><a href="#sops">SOPs</a></td><td>Technical</td><td><span class="pill ok">Met</span></td></tr>
+            <tr><td class="mono">5</td><td>Three-year term, renewable by mutual agreement</td><td><a href="#commercial">Commercial</a></td><td>Commercial</td><td><span class="pill ok">Met</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="sec alt" id="location">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Proposed operating location</span>
+        <h2>Sheraton Jumeirah Beach Resort</h2>
+        <p>Al Mamsha Street, Jumeirah Beach Residence, Dubai. A private sandy beach facing the Gulf, with views toward Ain Dubai.</p>
+      </div>
+      <div class="loc">
+        <div class="kv">
+          <div>Site</div><div>Dedicated Water Link concession on the resort's designated beach area, run by an on-site supervisor</div>
+          <div>Guests served</div><div>In-house guests, with concierge booking and room-charge settlement</div>
+          <div>Activities</div><div>Motorised (Jet Car, jet ski, towables) and non-motorised (single, double and clear kayaks, paddleboard), run in separate buoyed zones</div>
+          <div>Operating hours</div><div>09:00 – 18:00 daily, adjusted for weather and sea conditions</div>
+          <div>Permits</div><div>Site-specific DMA permit, obtained by Water Link before commencement</div>
+          <div>Backup</div><div>Water Link's FIVE LUXE JBR hub on the same JBR beachfront: 15 registered craft under DMA permit <span class="mono">PRMT202600110</span>, with spare equipment, relief crew and rescue support on the same beach</div>
+          <div>Map</div><div><a href="https://www.google.com/maps/search/?api=1&query=Sheraton%20Jumeirah%20Beach%20Resort" target="_blank" rel="noopener">View on Google Maps ↗</a></div>
+        </div>
+        <figure class="zone" style="margin:0">
+          <svg viewBox="0 0 560 360" role="img" aria-labelledby="zt">
+            <title id="zt">Proposed beach zoning: hotel, kiosk, equipment rack, motorised access lane, swim zone, paddle zone and offshore motorised zone</title>
+            <rect x="0" y="0" width="560" height="360" fill="var(--surface)"/>
+            <rect x="0" y="0" width="560" height="92" fill="var(--lagoon-soft)" opacity=".55"/>
+            <text x="18" y="30" fill="var(--muted)" font-family="var(--mono)" font-size="11" letter-spacing="1">SHERATON JBR · RESORT GARDENS & POOL</text>
+            <rect x="0" y="92" width="560" height="96" fill="var(--sand-soft)"/>
+            <text x="18" y="114" fill="var(--muted)" font-family="var(--mono)" font-size="11" letter-spacing="1">PRIVATE BEACH</text>
+            <rect x="36" y="128" width="104" height="44" rx="6" fill="var(--ink)"/>
+            <text x="88" y="155" text-anchor="middle" fill="var(--bg)" font-family="var(--body)" font-size="12" font-weight="600">Kiosk & briefing</text>
+            <rect x="152" y="128" width="96" height="44" rx="6" fill="none" stroke="var(--ink)" stroke-dasharray="4 3"/>
+            <text x="200" y="155" text-anchor="middle" fill="var(--ink)" font-family="var(--body)" font-size="12">Equipment rack</text>
+            <rect x="0" y="188" width="560" height="172" fill="var(--lagoon)" opacity=".18"/>
+            <path d="M0 188 Q140 178 280 188 T560 188" fill="none" stroke="var(--lagoon)" stroke-width="2"/>
+            <rect x="262" y="188" width="56" height="172" fill="var(--lagoon)" opacity=".28"/>
+            <text x="290" y="350" text-anchor="middle" fill="var(--ink)" font-family="var(--body)" font-size="11" font-weight="600">Access lane</text>
+            <rect x="24" y="288" width="220" height="50" rx="6" fill="none" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <text x="134" y="310" text-anchor="middle" fill="var(--ink)" font-family="var(--body)" font-size="12" font-weight="600">Motorised zone (offshore)</text>
+            <text x="134" y="326" text-anchor="middle" fill="var(--muted)" font-family="var(--body)" font-size="11">Jet Car · jet ski · towables</text>
+            <rect x="24" y="204" width="220" height="70" rx="6" fill="none" stroke="var(--sand)" stroke-width="2" stroke-dasharray="2 5"/>
+            <text x="134" y="244" text-anchor="middle" fill="var(--ink)" font-family="var(--body)" font-size="12" font-weight="600">Swim zone (buoyed)</text>
+            <rect x="336" y="214" width="200" height="110" rx="6" fill="none" stroke="var(--lagoon)" stroke-width="2"/>
+            <text x="436" y="266" text-anchor="middle" fill="var(--ink)" font-family="var(--body)" font-size="12" font-weight="600">Paddle zone</text>
+            <text x="436" y="283" text-anchor="middle" fill="var(--muted)" font-family="var(--body)" font-size="11">kayak · paddleboard</text>
+            <circle cx="520" cy="200" r="7" fill="var(--sand)"/><text x="506" y="204" text-anchor="end" fill="var(--muted)" font-family="var(--body)" font-size="10">Lifeguard post</text>
+            <text x="536" y="350" text-anchor="end" fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="1">ARABIAN GULF</text>
+          </svg>
+          <figcaption>Proposed zoning, illustrative and not to scale. Final positions agreed with resort management and the DMA.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFILE -->
+  <section class="sec" id="profile">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 2.1 · Company profile</span>
+        <h2>Who Water Link is, and who owns it.</h2>
+        <p>Water Link was the first operator to bring the Jet Car to the UAE and runs a full water-sports portfolio under the B2B-facing Water Link brand and the premium consumer brand, Seathrill.</p>
+      </div>
+      <div class="grid2">
+        <div class="kv">
+          <div>Legal name</div><div><b>Water Link Jet Ski Rental L.L.C</b><br><span class="muted" style="font-size:.9rem">Limited Liability Company · Commercial Register 1774602 · DCCI 412293</span></div>
+          <div>Ownership</div><div>Nandagopal Senthilvelan Nandagopal (60%), Founder & Owner and CEO of Rayna Destination Management · Saif Mohammed A. Aloqayli (40%). Part of Rayna Group, Dubai-headquartered, established 2006</div>
+          <div>Years in UAE</div><div>Water Link licensed since 04/02/2021; Rayna Group operating in the UAE for 20+ years. Seathrill is listed on Rayna's platform alongside Desert Camps, Balloon Flights and Deep Sea Adventure</div>
+          <div>Trade licence</div><div><span class="mono">No. 932635 · Dubai Economy and Tourism · valid to 03/02/2027</span><br><span class="muted" style="font-size:.9rem">Licensed activities: Watersports Equipment Rental · Jet Ski Rental · Leisure Yachts & Boats Rental</span></div>
+          <div>VAT registration</div><div><span class="mono">TRN 100463972800003</span> · Federal Tax Authority · effective 01/04/2022 · certificate in Annex B</div>
+          <div>Brands</div><div>Water Link (<a href="https://waterlinkae.ae" target="_blank" rel="noopener">waterlinkae.ae</a>) · Seathrill (<a href="https://seathrill.ae" target="_blank" rel="noopener">seathrill.ae</a>)</div>
+        </div>
+        <div class="grid2" style="align-content:start">
+          <div class="panel"><small class="muted">Guests served</small><b style="font-family:var(--display);font-size:1.8rem">25M+</b><span class="muted" style="font-size:.88rem">Rayna Group</span></div>
+          <div class="panel"><small class="muted">Operating in UAE</small><b style="font-family:var(--display);font-size:1.8rem">20+ yrs</b><span class="muted" style="font-size:.88rem">Group history</span></div>
+          <div class="panel"><small class="muted">Live hotel sites</small><b style="font-family:var(--display);font-size:1.8rem">9</b><span class="muted" style="font-size:.88rem">Dubai & Abu Dhabi</span></div>
+          <div class="panel"><small class="muted">Active fleet</small><b style="font-family:var(--display);font-size:1.8rem">39</b><span class="muted" style="font-size:.88rem">Craft, DMA & ADM registered</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="sec" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 2.2 · Hospitality experience</span>
+        <h2>Nine hotel properties, currently operating.</h2>
+        <p>Beachfront and luxury resorts across both emirates, including Marriott-family properties. Direct contacts for references are available on request.</p>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Property</th><th>Location</th><th>Setting</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><b>FIVE LUXE JBR</b><small>Same JBR beachfront as Sheraton</small></td><td>JBR, Dubai</td><td>Beachfront</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>FIVE Palm Jumeirah</b></td><td>Palm Jumeirah, Dubai</td><td>Beachfront</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>Royal Central — The Palm</b></td><td>Palm Jumeirah, Dubai</td><td>Hotel</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>The St. Regis Saadiyat Island</b><small>Marriott International</small></td><td>Saadiyat Island, Abu Dhabi</td><td>Beachfront</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>Park Hyatt Saadiyat Island</b></td><td>Abu Dhabi</td><td>Beachfront</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>The Ritz-Carlton, Grand Canal</b><small>Marriott International</small></td><td>Abu Dhabi</td><td>Hotel</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>Sheraton Abu Dhabi</b><small>Marriott International</small></td><td>Corniche Road, Abu Dhabi</td><td>Hotel</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>Le Méridien Abu Dhabi</b><small>Marriott International</small></td><td>Corniche Road, Abu Dhabi</td><td>Hotel</td><td><span class="pill ok">Operating</span></td></tr>
+            <tr><td><b>Radisson Blu Corniche</b></td><td>Abu Dhabi</td><td>Hotel</td><td><span class="pill ok">Operating</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- LICENSING -->
+  <section class="sec alt" id="licensing">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 2.3 & 2.4 · Licences, permits & insurance</span>
+        <h2>Every figure below is checkable.</h2>
+        <p>Full documentation is available for verification by the resort's purchasing office and is attached as annexes.</p>
+      </div>
+      <div class="tbl" style="margin-bottom:24px">
+        <table>
+          <thead><tr><th>Document</th><th>Reference</th><th>Valid to</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td><b>Trade Licence</b><small>Dubai Economy and Tourism</small></td><td class="mono">932635</td><td class="num">03/02/2027</td><td><span class="pill ok">Valid</span></td></tr>
+            <tr><td><b>DMA Maritime Permit</b><small>FIVE LUXE JBR</small></td><td class="mono">PRMT202600110</td><td class="num">02/06/2027</td><td><span class="pill ok">Valid</span></td></tr>
+            <tr><td><b>DMA Maritime Permit</b><small>FIVE Palm Jumeirah</small></td><td class="mono">PRMT202600156</td><td class="num">14/07/2027</td><td><span class="pill ok">Valid</span></td></tr>
+            <tr><td><b>DMA Maritime Permit</b><small>Sheraton Jumeirah Beach Resort</small></td><td class="mono">Site-specific, to be issued</td><td>Before commencement</td><td><span class="pill warn">Water Link to obtain</span></td></tr>
+            <tr><td><b>Public Liability</b><small>Orient Takaful PJSC · Cert. OTFL-CMA-2025-0021 · Insured: Water Link Jet Ski Rental L.L.C</small></td><td>USD 1,000,000 any one occurrence and in the aggregate<small>Territory and jurisdiction: UAE</small></td><td class="num">11/12/2026</td><td><span class="pill warn">Upgrading to USD 5M</span></td></tr>
+            <tr><td><b>Marine / Vessel Insurance</b><small>Al Wathba National Insurance; select craft Fidelity United, YACHTowners</small></td><td>Per-craft policies</td><td>Per policy</td><td><span class="pill ok">In force</span></td></tr>
+            <tr><td><b>Employee Insurance</b><small>Per UAE Labour Law</small></td><td>Rayna Group policy, applied group-wide</td><td>Per policy</td><td><span class="pill ok">In force</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid2">
+        <div class="panel">
+          <span class="eyebrow">Public liability commitment</span>
+          <h3>USD 5,000,000, worldwide jurisdiction including USA/Canada</h3>
+          <p class="muted">The current policy runs to 11 December 2026 with a USD 1M limit and UAE territory and jurisdiction. At the 12 December 2026 renewal Water Link will raise the limit to USD 5M any one occurrence, extend territory and jurisdiction to worldwide including USA/Canada, and widen the insured activity to all water-sports equipment rental. The renewed certificate will be issued to the resort before commencement.</p>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">Additional insured</span>
+          <h3>Marriott International is already named on the policy</h3>
+          <p class="muted">Marriott International Inc. is named as additional insured on certificate OTFL-CMA-2025-0021 today. Sheraton Jumeirah Beach Resort and its owning company will be added by endorsement at contract signing.</p>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">Equipment insurance</span>
+          <h3>All site equipment covered</h3>
+          <p class="muted">Every jet ski and Jet Car deployed at Sheraton JBR carries its own hull policy. The non-motorised kit will be listed on an equipment policy before commencement, with the full schedule shared with the resort.</p>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">Permit route</span>
+          <h3>Same route as FIVE LUXE and FIVE Palm</h3>
+          <p class="muted">Water Link obtains a separate DMA permit for each hotel under its existing trade licence. All permit costs sit with Water Link.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCOPE -->
+  <section class="sec" id="scope">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 1 · Scope of services</span>
+        <h2>The seven obligations, and how each is delivered.</h2>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Obligation</th><th>How Water Link delivers it</th></tr></thead>
+          <tbody>
+            <tr><td><b>Establish and operate the facility</b></td><td>Branded kiosk, equipment rack and buoyed launch lane in the designated area, staffed every operating day.</td></tr>
+            <tr><td><b>Range of water-sports activities</b></td><td>Non-motorised: single, double and clear kayaks, paddleboard. Motorised: Jet Car, Yamaha jet skis, banana and donut rides, kept to a separate buoyed zone.</td></tr>
+            <tr><td><b>Equipment, personnel, permits, licences, insurance</b></td><td>All supplied and paid for by Water Link, to UAE authority and Marriott standards.</td></tr>
+            <tr><td><b>Safety, environmental and regulatory compliance</b></td><td>Documented safety plan, risk register, DMA-certified crew and the environmental programme in this proposal.</td></tr>
+            <tr><td><b>Equipment maintenance</b></td><td>Daily pre-use checks, weekly deep inspection and a logged maintenance record per item.</td></tr>
+            <tr><td><b>Five-star guest service</b></td><td>Uniformed, trained staff; concession service standards aligned with the resort's brand standards.</td></tr>
+            <tr><td><b>Clean, professional concession area</b></td><td>Opening and closing checklists include area presentation; supervisor sign-off twice daily.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section class="sec dark" id="activities">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Activities offered</span>
+        <h2>One operator, from a calm morning paddle to the Jet Car.</h2>
+        <p>Every session includes a safety briefing, fitted life jacket and supervision from a certified instructor, lifeguard or DMA-licensed craft operator.</p>
+      </div>
+      <h3 style="margin:0 0 14px" class="eyebrow">Motorised</h3>
+      <div class="grid3" style="margin-bottom:28px">
+        <article class="act feature">
+          <div class="ph" style="--g:linear-gradient(150deg,#0F7A8A 0%,#06323C 70%)"><img src="img/jetcar.jpg" alt="Jet Car with a guest at the wheel" loading="lazy" onerror="this.remove()"><span class="ph-label">Jet Car</span></div>
+          <div class="body">
+            <span class="eyebrow">Signature</span><h3>Jet Car</h3>
+            <p class="muted">Water Link's own product and the first Jet Car in the UAE. A road-styled amphibious craft, guest-driven under supervision. A Jet Car Manta 2 (1800cc), carrying 2 guests.</p>
+            <div class="tags"><span>Guided</span><span>2 & 4 seats</span><span>Photo moment</span></div>
+          </div>
+        </article>
+        <article class="act">
+          <div class="ph" style="--g:linear-gradient(150deg,#1A5F8C 0%,#082A3A 75%)"><img src="img/jetski.jpg" alt="Jet ski rider off Dubai" loading="lazy" onerror="this.remove()"><span class="ph-label">Jet ski</span></div>
+          <div class="body">
+            <h3>Jet ski</h3>
+            <p class="muted">Yamaha VX-C 1050cc, solo or two-up, with a full safety briefing, an escort operator and a set route inside the motorised zone.</p>
+            <div class="tags"><span>Solo</span><span>Two-up</span><span>Guided route</span></div>
+          </div>
+        </article>
+        <article class="act">
+          <div class="ph" style="--g:linear-gradient(150deg,#C9A96B 0%,#7A4E2A 45%,#1E2A30 100%)"><img src="img/towables.jpg" alt="Family on a banana boat ride" loading="lazy" onerror="this.remove()"><span class="ph-label">Towables</span></div>
+          <div class="body">
+            <h3>Banana & donut</h3>
+            <p class="muted">Towed rides for families and groups, up to 5 guests per ride, towed at controlled speed by a DMA-licensed operator with a spotter.</p>
+            <div class="tags"><span>Families</span><span>Groups</span><span>Controlled speed</span></div>
+          </div>
+        </article>
+      </div>
+      <h3 style="margin:0 0 14px" class="eyebrow">Non-motorised</h3>
+      <div class="grid2">
+        <article class="act">
+          <div class="ph" style="--g:linear-gradient(150deg,#E08A4F 0%,#8A3B5C 50%,#1B2440 100%)"><img src="img/kayak.jpg" alt="Two guests paddling a double kayak" loading="lazy" onerror="this.remove()"><span class="ph-label">Kayak</span></div>
+          <div class="body">
+            <h3>Single & double kayaks</h3>
+            <p class="muted">Sit-on-top kayaks for one or two, with a short briefing and a marked route inside the paddle zone. Guided sunset sessions on request.</p>
+            <div class="tags"><span>1–2 pax</span><span>Families</span><span>Sunset sessions</span></div>
+          </div>
+        </article>
+        <article class="act">
+          <div class="ph" style="--g:linear-gradient(150deg,#59C3C3 0%,#2A7F8F 50%,#0B3440 100%)"><img src="img/clearkayak.jpg" alt="Guests in a clear kayak at sunset" loading="lazy" onerror="this.remove()"><span class="ph-label">Clear kayak</span></div>
+          <div class="body">
+            <h3>Clear kayaks & paddleboard</h3>
+            <p class="muted">Transparent kayaks for two that show the seabed beneath, plus a stand-up paddleboard with a quick lesson for first-timers.</p>
+            <div class="tags"><span>2 pax clear kayak</span><span>Paddleboard</span><span>Photo moment</span></div>
+          </div>
+        </article>
+      </div>
+      <div class="addon">
+        <span class="badge">Zoning</span>
+        <div>
+          <h3 style="margin-bottom:6px">Motorised and non-motorised never share water</h3>
+          <p class="muted">Swimmers stay inside the buoyed swim zone, paddle craft inside the near-shore paddle zone, and motorised craft enter and leave only through the buoyed access lane at no-wake speed before reaching the offshore motorised zone.</p>
+        </div>
+      </div>
+      <div class="gallery" aria-label="Water Link on the water">
+        <figure class="g-wide"><img src="img/g-banana-skyline.jpg" alt="Family on a banana ride with the Dubai skyline behind" loading="lazy" onerror="this.parentNode.remove()"></figure>
+        <figure><img src="img/g-aerial-kayak.jpg" alt="Aerial view of a double kayak on blue water" loading="lazy" onerror="this.parentNode.remove()"></figure>
+        <figure><img src="img/g-jetski-splash.jpg" alt="Two riders on a jet ski" loading="lazy" onerror="this.parentNode.remove()"></figure>
+        <figure><img src="img/g-donut.jpg" alt="Group on a donut ride" loading="lazy" onerror="this.parentNode.remove()"></figure>
+        <figure><img src="img/g-sunset-kayak.jpg" alt="Kayakers at sunset off Dubai Marina" loading="lazy" onerror="this.parentNode.remove()"></figure>
+        <figure class="g-wide"><img src="img/g-jetski-tour.jpg" alt="Jet ski rider on open water" loading="lazy" onerror="this.parentNode.remove()"></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="statband" role="presentation">
+    <div class="wrap">
+      <div><b>15+</b><small>Vessels at opening, scalable</small></div>
+      <div><b>33</b><small>Guests on the water at once</small></div>
+      <div><b>09–18</b><small>Daily, weather permitting</small></div>
+      <div><b>3 yrs</b><small>Concession term</small></div>
+    </div>
+  </div>
+
+  <!-- INVENTORY -->
+  <section class="sec" id="inventory">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Equipment inventory</span>
+        <h2>Proposed site inventory for Sheraton JBR.</h2>
+        <p>The proposed opening inventory for Sheraton JBR. It can be increased to match the resort's needs and the craft numbers approved on the operating permit, drawing on Water Link's group fleet shown alongside.</p>
+      </div>
+      <div class="addon" style="margin:0 0 20px">
+        <span class="badge">Same beach</span>
+        <div>
+          <h3 style="margin-bottom:6px">FIVE LUXE JBR: Water Link's largest hub, on the same JBR beachfront</h3>
+          <p class="muted">15 registered craft (13 jet skis, 2 Jet Cars) operating under DMA Maritime Permit <span class="mono">PRMT202600110</span>, valid to 02/06/2027. It gives the Sheraton concession same-beach cover for equipment, relief staff and a powered rescue craft.</p>
+        </div>
+      </div>
+      <div class="grid2">
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Category</th><th>Vessel / equipment</th><th class="r">Qty</th><th class="nw">Capacity</th></tr></thead>
+            <tbody>
+              <tr><td>Motorised</td><td><b>Jet Cars</b><small>Jet Car Manta 2 · 1800cc</small></td><td class="r num">1</td><td>2 pax each</td></tr>
+              <tr><td>Motorised</td><td><b>Jet skis</b><small>Yamaha VX-C · 1050cc</small></td><td class="r num">5</td><td>2 pax each</td></tr>
+              <tr><td>Motorised</td><td><b>Towable: banana</b></td><td class="r num">1</td><td>5 pax</td></tr>
+              <tr><td>Motorised</td><td><b>Towable: donut</b></td><td class="r num">1</td><td>5 pax</td></tr>
+              <tr><td>Non-motorised</td><td><b>Single kayaks</b></td><td class="r num">2</td><td>1 pax each</td></tr>
+              <tr><td>Non-motorised</td><td><b>Double kayaks</b></td><td class="r num">2</td><td>2 pax each</td></tr>
+              <tr><td>Non-motorised</td><td><b>Clear kayaks</b></td><td class="r num">2</td><td>2 pax each</td></tr>
+              <tr><td>Non-motorised</td><td><b>Paddleboard</b></td><td class="r num">1</td><td>1 pax</td></tr>
+              <tr><td>Safety</td><td>Life jackets (all sizes incl. child), rescue board and tubes, first-aid and oxygen kits, VHF radios</td><td class="r">On site</td><td>—</td></tr>
+              <tr><td>Safety</td><td>Swim-zone, paddle-zone and access-lane buoys</td><td class="r">Per DMA</td><td>—</td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="2">Proposed total · guests on the water at once</td><td class="r num">15</td><td class="num">33 pax</td></tr><tr><td colspan="4" style="font-weight:400;background:var(--surface);white-space:normal;color:var(--muted);font-size:.88rem">Quantities can be increased to suit the resort's demand and the craft numbers approved on the DMA operating permit.</td></tr></tfoot>
+          </table>
+        </div>
+        <div class="tbl">
+          <table>
+            <thead><tr><th>Group fleet (backup)</th><th>Emirate</th><th class="r">Craft</th></tr></thead>
+            <tbody>
+              <tr><td><b>FIVE LUXE JBR</b><small>Same beach · PRMT202600110</small></td><td>Dubai</td><td class="r num">15</td></tr>
+              <tr><td>Dubai Harbour</td><td>Dubai</td><td class="r num">11</td></tr>
+              <tr><td>FIVE Palm Jumeirah</td><td>Dubai</td><td class="r num">4</td></tr>
+              <tr><td>Radisson Blu Corniche</td><td>Abu Dhabi</td><td class="r num">7</td></tr>
+              <tr><td>Sheraton Corniche</td><td>Abu Dhabi</td><td class="r num">2</td></tr>
+            </tbody>
+            <tfoot><tr><td>Total registered craft</td><td></td><td class="r num">39</td></tr></tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="sec alt" id="team">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Staffing, training & certification</span>
+        <h2>Who runs the concession, day to day.</h2>
+      </div>
+      <div class="grid2" style="margin-bottom:28px">
+        <div class="org">
+          <div class="org-row"><span class="lvl">L1</span><div><b>Founder & Owner</b><div class="muted" style="font-size:.9rem">Senthilvelan Nandagopal, CEO of Rayna Destination Management</div></div></div>
+          <div class="org-row l2"><span class="lvl">L2</span><div><b>Operations Manager</b><div class="muted" style="font-size:.9rem">Oversees all Dubai hubs; escalation point for the resort</div></div></div>
+          <div class="org-row l3"><span class="lvl">L3</span><div><b>Site Supervisor</b><div class="muted" style="font-size:.9rem">Dedicated to Sheraton JBR; first contact for resort management</div></div></div>
+          <div class="org-row l4"><span class="lvl">L4</span><div><b>Instructors / DMA-licensed Craft Operators</b><div class="muted" style="font-size:.9rem">Briefings, guided rides and escorts, lessons, equipment issue</div></div></div>
+          <div class="org-row l4"><span class="lvl">L4</span><div><b>Lifeguard (1 per shift)</b><div class="muted" style="font-size:.9rem">Dedicated on-water watch during all operating hours</div></div></div>
+          <div class="org-row l4"><span class="lvl">L4</span><div><b>Maintenance Technician</b><div class="muted" style="font-size:.9rem">Shared with FIVE LUXE JBR; weekly inspections</div></div></div>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">Training & certification programme</span>
+          <h3>Every staff member, before their first shift and every year after</h3>
+          <ul class="ticks">
+            <li>Lifeguard certification valid for open water, renewed before expiry</li>
+            <li>First aid and CPR/AED, renewed every two years</li>
+            <li>STCW basic safety for crew on the water</li>
+            <li>Instructor qualification for SUP and kayak lessons</li>
+            <li>Resort induction: brand standards, guest service, room-charge process</li>
+            <li>Monthly drills: rescue, missing guest, weather recall</li>
+            <li>Training log per person, shared with the resort quarterly</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Current certified crew</th><th>Nationality</th><th>Licence</th><th>Other certifications</th></tr></thead>
+          <tbody>
+            <tr><td><b>Saaru Sanjaya Kumara</b></td><td>Sri Lanka</td><td class="mono">D300198625<small>Commercial, ≤12m</small></td><td>STCW full set (2024); Pool Lifeguard, valid to 07/02/2027</td></tr>
+            <tr><td><b>Samera Sampath Dharmasiri Balagahagama</b></td><td>Sri Lanka</td><td class="mono">M100190723<small>Commercial, ≤12m</small></td><td>American Lifeguard Assoc. cert (2022), renewal scheduled</td></tr>
+            <tr><td><b>Wilhem Agapito Peralta</b></td><td>Philippines</td><td class="mono">A300035221<small>Commercial, ≤12m</small></td><td>RYA Powerboat Level 2 (2020)</td></tr>
+            <tr><td><b>Arul Dhasan Sahaya Ajin Prince</b></td><td>India</td><td>—</td><td>STCW full set, issued 05/02/2025</td></tr>
+            <tr><td><b>Lakshan Nishshanka Antony Gamage</b></td><td>Sri Lanka</td><td class="mono">M100144424<small>Pleasure Boat, ≤12m</small></td><td>—</td></tr>
+            <tr><td><b>John Nwite Okoha</b></td><td>Nigeria</td><td class="mono">DMA Skipper 25018<small>Commercial, ≤12m</small></td><td>DMA Instructor Permit 24366 (to 03/08/2030); VHF Radio (to 15/07/2030); STCW Security Awareness (2023)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAFETY -->
+  <section class="sec" id="safety">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Safety management plan</span>
+        <h2>Six controls that run every operating day.</h2>
+      </div>
+      <div class="hse">
+        <div class="panel"><span class="code">HSE 01</span><h3>Zoning & supervision</h3><p class="muted">Swim, paddle and motorised zones separated by buoys; motorised craft use only the access lane at no-wake speed. A lifeguard watches the water at all times.</p></div>
+        <div class="panel"><span class="code">HSE 02</span><h3>Weather & sea limits</h3><p class="muted">Checked at opening and hourly. Activities stop in offshore winds, rough sea, lightning or poor visibility, with a set recall signal.</p></div>
+        <div class="panel"><span class="code">HSE 03</span><h3>Guest briefing & waiver</h3><p class="muted">Mandatory briefing on zone limits, life jacket use and recall signal. Age, ability and signed waiver checked before issue.</p></div>
+        <div class="panel"><span class="code">HSE 04</span><h3>Equipment checks</h3><p class="muted">Pre-use checklist for every item. Damaged equipment is tagged out and removed until repaired.</p></div>
+        <div class="panel"><span class="code">HSE 05</span><h3>Risk register</h3><p class="muted">Documented hazards covering collision, drift, capsize, sun exposure and guest conduct, each rated and controlled, reviewed quarterly.</p></div>
+        <div class="panel"><span class="code">HSE 06</span><h3>Incident reporting</h3><p class="muted">Ten-step process from immediate assistance through resort notification, written report within 24 hours and corrective action.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOPS -->
+  <section class="sec alt" id="sops">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Standard operating procedures</span>
+        <h2>Opening, operating, closing, maintenance and emergency.</h2>
+        <p>Summaries of each SOP. The full signed SOP manual, with checklists for each activity, is attached as Annex E.</p>
+      </div>
+      <div class="sop">
+        <details open>
+          <summary><span class="code">SOP-01</span>Opening<span class="when">Before first guest</span></summary>
+          <ol>
+            <li>Supervisor arrives 45 minutes before opening and signs in with resort security.</li>
+            <li>Check weather, wind, sea state and any DMA notices; record in the daily log.</li>
+            <li>Inspect swim-zone and lane buoys; reset any that have drifted.</li>
+            <li>Pre-use check on every jet ski, Jet Car, towable, kayak, paddleboard and life jacket; tag out faults.</li>
+            <li>Set up kiosk, rack and signage; check first-aid kit, oxygen and radios.</li>
+            <li>Lifeguard takes position; team briefing on conditions and bookings.</li>
+            <li>Supervisor confirms opening to the resort duty manager.</li>
+          </ol>
+        </details>
+        <details>
+          <summary><span class="code">SOP-02</span>Guest activity<span class="when">Every session</span></summary>
+          <ol>
+            <li>Confirm booking or walk-in, room number or payment, and signed waiver.</li>
+            <li>Check age, swimming ability and any medical declaration; for motorised rides, check ID and the DMA minimum age for drivers.</li>
+            <li>Fit life jacket; deliver the activity briefing with zone map and recall signal.</li>
+            <li>Launch through the marked lane; lifeguard logs craft out with time.</li>
+            <li>Monitor throughout; recall at session end or on any weather change.</li>
+            <li>Log craft back in, rinse equipment, settle charge to room or payment.</li>
+          </ol>
+        </details>
+        <details>
+          <summary><span class="code">SOP-03</span>Closing<span class="when">After last session</span></summary>
+          <ol>
+            <li>Confirm every craft is back and matches the out-log count.</li>
+            <li>Rinse all equipment with fresh water and dry life jackets.</li>
+            <li>Post-use inspection; log faults for the maintenance technician.</li>
+            <li>Secure equipment in the lockable storage; clear and clean the area.</li>
+            <li>Reconcile sales against bookings and room charges; submit daily report.</li>
+            <li>Supervisor confirms closure to the resort duty manager.</li>
+          </ol>
+        </details>
+        <details>
+          <summary><span class="code">SOP-04</span>Maintenance<span class="when">Daily · weekly · monthly</span></summary>
+          <ol>
+            <li>Daily: pre- and post-use checks; fresh-water rinse.</li>
+            <li>Weekly: technician inspects hulls, seals, fins, tow ropes, fittings and safety gear.</li>
+            <li>Motorised craft: serviced every 50 engine hours (boats every 100), with engine hours logged at each service.</li>
+            <li>Monthly: full inventory count and condition grading; replace worn items.</li>
+            <li>Life jackets: inspected weekly, retired on any damage or fading.</li>
+            <li>Every action logged per item; log available to the resort at any time.</li>
+          </ol>
+        </details>
+        <details>
+          <summary><span class="code">SOP-05</span>Emergency<span class="when">Rescue · medical · weather</span></summary>
+          <ol>
+            <li>Lifeguard signals recall and launches the rescue board; second staff member keeps watch.</li>
+            <li>Bring the guest ashore; give first aid, CPR and oxygen as needed.</li>
+            <li>Call 999 and the resort duty manager and security immediately.</li>
+            <li>Clear the water of all guests; suspend activities.</li>
+            <li>Missing guest: count all craft, run shoreline search, alert Coast Guard and DMA.</li>
+            <li>Written incident report to the resort within 24 hours; review and corrective action.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSTAINABILITY -->
+  <section class="sec" id="sustainability">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Environmental & sustainability</span>
+        <h2>A light footprint on the Sheraton beach and the water around it.</h2>
+      </div>
+      <div class="grid3">
+        <div class="panel"><h3>Fuel and spill control</h3><p class="muted">Modern four-stroke craft. Refuelling only in a designated area with drip trays and a spill kit; no fuel stored on the beach beyond the day's need.</p></div>
+        <div class="panel"><h3>Single-use plastic free</h3><p class="muted">Refillable water for guests and staff, no plastic bottles or straws at the kiosk.</p></div>
+        <div class="panel"><h3>Reef-safe sunscreen</h3><p class="muted">Offered at the kiosk and recommended in every briefing.</p></div>
+        <div class="panel"><h3>Monthly beach & sea clean-up</h3><p class="muted">Staff-led clean-up of the beach and paddle zone, open to guests as an activity.</p></div>
+        <div class="panel"><h3>Long-life equipment</h3><p class="muted">Durable kit bought to last, repaired before replaced, and recycled through the supplier at end of life.</p></div>
+        <div class="panel"><h3>Water use</h3><p class="muted">Low-flow rinse station; rinse water directed to resort landscaping where engineering approves.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARKETING -->
+  <section class="sec alt" id="marketing">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 4 · Marketing & guest engagement</span>
+        <h2>Bringing guests to the water, inside the resort and beyond it.</h2>
+        <p>All promotional material is accuracy-checked and approved by the resort before use.</p>
+      </div>
+      <div class="grid2">
+        <div class="panel">
+          <h3>In-resort</h3>
+          <ul class="ticks">
+            <li>Activity cards in rooms and at concierge, with QR booking</li>
+            <li>Concierge booking with room-charge settlement</li>
+            <li>Weekly complimentary 2-hour SUP or kayak session for in-house guests</li>
+            <li>Incentive for concierge and front office on every package sold</li>
+            <li>Kids' and family sessions run with the resort's kids club</li>
+            <li>Bonvoy-member offers, if the resort wishes</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Beyond the resort</h3>
+          <ul class="ticks">
+            <li>Listing on seathrill.ae and waterlinkae.ae as a Sheraton JBR location</li>
+            <li>Promotion of the resort's day-use packages alongside water sports</li>
+            <li>Distribution through Rayna Group and Water Link B2B agents</li>
+            <li>Corporate team-building packages using the resort lawn and beach</li>
+            <li>Social content from the site, shared with the resort's channels</li>
+            <li>Monthly performance report to the resort: sessions, guests, feedback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMERCIAL -->
+  <section class="sec sand" id="commercial">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">RFP 3 & 5 · Commercial proposal</span>
+        <h2>A fixed annual concession fee over a three-year term.</h2>
+        <p>Proposed for the exclusive operation of motorised and non-motorised water sports at Sheraton Jumeirah Beach Resort. All amounts in UAE dirhams.</p>
+      </div>
+      <div class="comm">
+        <div>
+          <div class="fee-card">
+            <div class="eyebrow">Proposed annual concession fee</div>
+            <div class="fee-big num">AED 650,000<span>/ year</span></div>
+            <p style="opacity:.8;font-size:.95rem">Inclusive of 5% VAT, for each of the three years. AED 1,950,000 over the full term.</p>
+          </div>
+          <div class="terms">
+            <div><small>Term</small>3 years from the agreed commencement date</div>
+            <div><small>Renewal</small>By mutual agreement, subject to performance review</div>
+            <div><small>Fee basis</small>Fixed annual fee, AED 650,000 incl. VAT</div>
+            <div><small>Operating hours</small>09:00 – 18:00 daily, weather permitting</div>
+            <div><small>Payment schedule</small>To be agreed with the resort's finance team</div>
+            <div><small>Permits & insurance</small>Obtained and paid for by Water Link</div>
+            <div><small>Additional insured</small>Resort added on public liability at signing</div>
+          </div>
+        </div>
+        <div style="display:grid;gap:20px">
+          <div class="tbl">
+            <table>
+              <thead><tr><th>Period</th><th class="r">Fee excl. VAT</th><th class="r">VAT 5%</th><th class="r">Total</th></tr></thead>
+              <tbody class="num">
+                <tr><td>Monthly equivalent</td><td class="r">51,587.30</td><td class="r">2,579.37</td><td class="r">54,166.67</td></tr>
+                <tr><td>Year 1</td><td class="r">619,047.62</td><td class="r">30,952.38</td><td class="r">650,000.00</td></tr>
+                <tr><td>Year 2</td><td class="r">619,047.62</td><td class="r">30,952.38</td><td class="r">650,000.00</td></tr>
+                <tr><td>Year 3</td><td class="r">619,047.62</td><td class="r">30,952.38</td><td class="r">650,000.00</td></tr>
+              </tbody>
+              <tfoot class="num"><tr><td>3-year contract</td><td class="r">1,857,142.86</td><td class="r">92,857.14</td><td class="r">1,950,000.00</td></tr></tfoot>
+            </table>
+          </div>
+          <div class="panel">
+            <span class="eyebrow">Investment commitment</span>
+            <h3>Fully funded by Water Link, before opening</h3>
+            <p class="muted">Covering the site craft and equipment inventory, branded kiosk and storage, safety equipment and zone buoys, all to resort design approval.</p>
+          </div>
+        </div>
+      </div>
+      <div class="vas" id="value-added">
+        <div class="vas-head">
+          <span class="eyebrow">Value-added services</span>
+          <h3>What Sheraton JBR gets on top of the concession fee</h3>
+          <p class="muted">Seven commitments for the resort's team, its guests and its sales, all at no cost to the resort.</p>
+        </div>
+        <div class="vas-feature">
+          <article class="vf">
+            <span class="who">Resort staff</span>
+            <b class="vf-big">50% off</b>
+            <h4>Special rate for staff and their relatives</h4>
+            <p>Every Sheraton JBR employee, and their relatives, get 50% off all Water Link activities, including the Jet Car.</p>
+          </article>
+          <article class="vf">
+            <span class="who">In-house guests</span>
+            <b class="vf-big">2 hrs free</b>
+            <h4>Weekly complimentary SUP or kayak session</h4>
+            <p>One 2-hour stand-up paddle or kayak session every week, free of charge for hotel guests. Day and time set with the resort.</p>
+          </article>
+          <article class="vf">
+            <span class="who">MICE clients</span>
+            <b class="vf-big">Team building</b>
+            <h4>Packages for the resort's MICE clients</h4>
+            <p>Jet Car, jet ski, banana, donut and kayak challenges, built around the resort's lawn, beach and F&amp;B, and quoted per group.</p>
+          </article>
+        </div>
+        <div class="vas-grid">
+          <article class="vc">
+            <span class="who">Sales &amp; front office</span>
+            <h4>Working with the hotel sales team and front office</h4>
+            <p>Joint packages with the sales team, one shared booking process with front office, and briefings for new front-office staff.</p>
+          </article>
+          <article class="vc">
+            <span class="who">Concierge &amp; front office</span>
+            <h4>Incentive on every package and programme sold</h4>
+            <p>Concierge and front-office staff earn an incentive on every water-sports package and programme they sell, paid monthly.</p>
+          </article>
+          <article class="vc">
+            <span class="who">Day-use revenue</span>
+            <h4>Promoting the resort's existing day-use packages</h4>
+            <p>Sheraton JBR's day-use packages promoted on seathrill.ae and waterlinkae.ae and through Water Link's B2B agents, and bundled with water sports.</p>
+          </article>
+          <article class="vc">
+            <span class="who">Resort management</span>
+            <h4>Monthly performance and guest-feedback report</h4>
+            <p>Sessions, guests and sales by activity, guest ratings and comments, and any incidents, reviewed with management every month.</p>
+          </article>
+        </div>
+      </div>
+      <p class="callout" style="margin-top:28px">Supporting documents (trade licence, VAT certificate, DMA permits, insurance certificates, crew certificates and the SOP manual) are attached as annexes and available from the purchasing office on request.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:grid;gap:8px">
+      <img src="img/wordmark.png" alt="Water Link — Jet . Set . Go" onerror="this.remove()">
+      <span class="muted" style="font-size:.9rem">Part of Rayna Group · <a href="https://waterlinkae.ae" target="_blank" rel="noopener">waterlinkae.ae</a> · <a href="https://seathrill.ae" target="_blank" rel="noopener">seathrill.ae</a> · <a href="https://waterlink-catalogue.vercel.app/" target="_blank" rel="noopener">Catalogue</a></span>
+    </div>
+    <div class="contact">
+      <b>Mohamed Hafez</b>
+      <span>mohamed@waterlinkae.ae</span>
+      <span class="num">+971 56 403 3848</span>
+    </div>
+  </div>
+</footer>
